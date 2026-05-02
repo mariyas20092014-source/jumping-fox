@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Crossing - Educational Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Banks -->
+        <div class="bank" id="left-bank"></div>
+        <div class="bank" id="right-bank"></div>
+
+        <!-- UI -->
+        <div id="ui-layer">
+            <div class="hud-panel" id="score-display">Score: 0</div>
+            
+            <div class="question-wrapper">
+                <div id="question-box">Loading...</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <button class="hud-panel" id="restart-btn" onclick="initGame(true)">Restart</button>
+                <button class="hud-panel" id="fullscreen-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+            </div>
+        </div>
+
+        <!-- Rocks Container -->
+        <div id="rocks-container"></div>
+
+        <!-- Character -->
+        <div id="character">
+            <div id="character-bounce">
+                <img id="character-img" src="images/fox.gif" alt="Fox Character">
+            </div>
+        </div>
+
+        <!-- Default Pop-up Overlay -->
+        <div id="overlay" class="modal-overlay">
+            <div class="modal-box">
+                <div id="overlay-msg" class="modal-msg">Message</div>
+                <button class="action-btn" id="overlay-btn">Action</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="javascript/game.js"></script>
+</body>
+</html>
